@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>EMPRESA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+    }
+
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .jumbotron {
+      background-color: #0d214f;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .container-fluid {
+      padding: 60px 50px;
+    }
+
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+
+    .logo-small {
+      color: #0d214f;
+      font-size: 50px;
+    }
+
+    .logo {
+      color: #0d214f;
+      font-size: 200px;
+    }
+
+    .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+
+    .carousel-control.right,
+    .carousel-control.left {
+      background-image: none;
+      color: #0d214f;
+    }
+
+    .carousel-indicators li {
+      border-color: #0d214f;
+    }
+
+    .carousel-indicators li.active {
+      background-color: #0d214f;
+    }
+
+    .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+    }
+
+    .item span {
+      font-style: normal;
+    }
+
+    .panel {
+      border: 1px solid #f4511e;
+      border-radius: 0 !important;
+      transition: box-shadow 0.5s;
+    }
+
+    .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+    }
+
+    .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+    }
+
+    .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    .panel-footer {
+      background-color: white !important;
+    }
+
+    .panel-footer h3 {
+      font-size: 32px;
+    }
+
+    .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      background-color: #0d214f;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .navbar li a,
+    .navbar .navbar-brand {
+      color: #fff !important;
+    }
+
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+      color: #0d214f !important;
+      background-color: #fff !important;
+    }
+
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+
+    footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #0d214f;
+    }
+
+    .slideanim {
+      visibility: hidden;
+    }
+
+    .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+    }
+
+    #fotos {
+      width: 300px;
+      height: 500px;
+      margin-left: 600px;
+      border-radius: 8px;
+    }
+
+    #fotos1 {
+      width: 900px;
+      height: 500px;
+      margin-left: 300px;
+      border-radius: 8px;
+    }
+
+    #fotos2 {
+      width: 900px;
+      height: 500px;
+      margin-left: 300px;
+      border-radius: 8px;
+    }
+
+    #fot {
+      width: 700px;
+      height: 300px;
+    }
+    
+    #logos {
+      width: 300px;
+      height: 300px;
+      position: center;
+    }
+   
+
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+
+      .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .logo {
+        font-size: 150px;
+      }
+    }
+
+    .github{
+      width: 100%;
+      border-radius: 5px;
+    }
+    .github :hover{
+      background-color:black;
+      color: white;
+    }
+
+
+    .Linkedin{
+      width: 100%;
+      border-radius: 5px;
+    }
+    .Linkedin :hover{
+      background-color:black;
+      color: white;
+    }
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#myPage"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-left" style=" margin-left: -200px;">
+          <li><a href="#about">SOBRE</a></li>
+          <li><a href="#services">CONCEITOS</a></li>
+          <li><a href="#portfolio">EQUIPE</a></li>
+          <li><a href="#contact">CONTATO</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+      <img src="img/logo.png" id = "logos">
+    <h1>PROGRAM MASTERY</h1>
+    <p>Soluções em dominío de programação</p>
+  </div>
+
+  <!-- Container (About Section) -->
+  <div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>SOBRE A EMPRESA</h2><br>
+        <h4>O que move a Program Mastery   são os desafios do mercado. Nosso foco é gerar resultados para os clientes e ajudá-los a desenvolver o seu negócio de forma organizada e sustentável.</h4><br>
+        <p>Fazer o melhor sempre: O que chegar às nossas mãos, faremos com toda nossa força e responsabilidade.</p>
+        <p> Inovação: somos desafiados todos os dias a aprender e inovar. </p>
+        <p>Foco no resultado: Nossas ações são sempre destinadas a gerar rentabilidade para os clientes.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-signal logo"></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="services" class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-globe logo slideanim"></span>
+      </div>
+      <div class="col-sm-8">
+        <h2>CONCEITOS DA EMPRESA</h2><br>
+        <h4><strong>MISSÃO:</strong> Ser uma empresa inovadora, que se atualiza com às tendências do mercado da
+          tecnologia e que se utiliza da melhor aplicação disponível no desenvolvimento dos Softwares. </h4><br>
+        <h4><strong>VISÃO:</strong> Ter o reconhecimento como empresa referência do mercado tecnológico e a mais
+          especializada em automação comercial, adequando-se às necessidades de cada segmento do mercado e por garantir
+          alta qualidade em serviços. </h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (Services Section) -->
+  <div class="container-fluid text-center">
+    <h2>VALORES</h2>
+    <h4>Nossos valores</h4>
+    <br>
+    <div class="row slideanim">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-off logo-small"></span>
+        <h4>Força</h4>
+        <p>Trabalho em equipe.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart logo-small"></span>
+        <h4>Amor</h4>
+        <p>Paixão por aquilo que fazemos.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-lock logo-small"></span>
+        <h4>Tarefa concluída</h4>
+        <p>Comprometimento a entrega de nossos serviços.</p>
+      </div>
+    </div>
+    <br><br>
+    <div class="row slideanim">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-leaf logo-small"></span>
+        <h4>Ética</h4>
+        <p>Respeito aos nosso clientes.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-certificate logo-small"></span>
+        <h4>Certificado</h4>
+        <p>Garantia de entrega e satisfação do cliente.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-wrench logo-small"></span>
+        <h4 style="color:#303030;">Trabalho duro</h4>
+        <p>Dedicação aos projetos propostos.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (Portfolio Section) -->
+  <div id="portfolio" class="container-fluid text-center bg-grey">
+    <h2> EQUIPE PROGRAM MASTERY </h2><br>
+    <div class="row text-center" style="margin-left: 200px; margin-right: auto">
+      <div class="col-md-2 slideanim">
+        <div class="thumbnail" style=" height: 460px; ">
+          <img src="img/ander.jpg" id="fot" alt="Paris" width="500" height="200">
+          <p><strong> Anderson Rocha </strong></p>
+          <p>Programador Full-Stack</p> 
+          <br>
+          <div class="github">  
+          <a href="https://github.com/anderrf" target="_blank"><i class="fab fa-github" class="github"></i>GitHub</a>
+              <div class="linkedin">
+                <a href="https://www.linkedin.com/in/anderson-rocha-farias-57b5b3198" target="_blank"><i class="fab fa-linkedin" style="color: royalblue;"></i> Linkedin </a>
+              </div>
+            </div>  
+        </div>
+      </div>
+
+      <div class="col-md-2 slideanim">
+        <div class="thumbnail" style=" height: 460px; ">
+          <img src="img/jean.jpeg" id="fot" alt="Paris" width="500" height="200">
+          <p><strong> Jean Pedro </strong></p>
+          <p>Programador Front-End     DBA</p>
+          <div class="github">
+          <a href="https://github.com/jeankorla" target="_blank"><i class="fab fa-github" class="github"></i> GitHub </a>      
+            <div class="Linkedin">
+              <a href="https://www.linkedin.com/in/jean-pedro-da-silva-korla-b03238197/" target="_blank"><i class="fab fa-linkedin" style="color: royalblue;"></i> Linkedin</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 slideanim">
+        <div class="thumbnail" style=" height: 460px; ">
+          <img src="img/let.jpg" id="fot" alt="jean" width="500" height="200">
+          <p><strong> Leticia Marques </strong></p>
+          <p> Designer </p>
+          <br>
+          <div class="github">
+            <a href="https://github.com/MarquesLeh" target="_blank"><i class="fab fa-github" class="github" ></i> GitHub </a>
+            <div class="Linkedin">
+            <a href="https://www.linkedin.com/in/leticia-marques-aab683197" target="_blank"><i class="fab fa-linkedin" style="color: royalblue;"></i> Linkedin</a>
+          </div>
+        </div>
+          
+        </div>
+      </div>
+
+      <div class="col-md-2 slideanim">
+        <div class="thumbnail" style=" height: 460px; ">
+          <img src="img/o.jpg" id="fot" alt="Paris" width="500" height="200">
+          <p><strong> Odara Fernanda </strong></p>
+          <p>Analista</p>
+          <br>
+          <div class="github">
+            <a href="https://github.com/Odara123" target="_blank"><i class="fab fa-github" class="github" ></i> GitHub </a>
+            <div class="Linkedin">
+            <a href="https://www.linkedin.com/in/odara-toledo-691926198/" target="_blank"><i class="fab fa-linkedin" style="color: royalblue;"></i> Linkedin</a>
+          </div>
+        </div>
+         
+        </div>
+      </div>
+
+      <div class="col-md-2 slideanim">
+        <div class="thumbnail" style=" height: 460px; ">
+          <img src="img/sergio.jpg" id="fot" alt="Paris" width="500" height="200">
+          <p><strong> Sergio Gama</strong></p>
+          <p>Programador Front-End       DBA </p>
+          <div class="github">
+          <a href="https://github.com/Gdaj" target="_blank"><i class="fab fa-github" class="github" ></i> GitHub </a>
+          <div class="Linkedin">
+          <a href="https://www.linkedin.com/in/sergio-gama-de-amorim-junior-5455aa198/" target="_blank"><i class="fab fa-linkedin" style="color: royalblue;"></i> Linkedin</a>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>
+
+    <h2>NOSSOS PROJETOS</h2>
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="img/app.jpeg" id="fotos" alt="Paris" width="500" height="200">
+        </div>
+        <div class="item">
+          <img src="img/app2.png" id="fotos1" alt="Paris" width="500" height="200">
+        </div>
+        <div class="item">
+          <img src="img/app3.png" id="fotos2" alt="Paris" width="500" height="200">
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Container (Contact Section) -->
+  <div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center">CONTATO</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p> Entre em contato conosco e entraremos em contato em 24 horas.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Mongaguá, SP</p>
+        <p><span class="glyphicon glyphicon-phone"></span> 13 99204-4474 </p>
+        <p><span class="glyphicon glyphicon-envelope"></span> jeansilvakorla@hotmail.com</p>
+      </div>
+      <div class="col-sm-7 slideanim">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Escreva" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image of location/map -->
+  <img src="img/mapa.png" class="w3-image w3-greyscale-min" style="width:80%; margin-left: 150px;" >
+
+  <footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p> Program Mastery </p>
+  </footer>
+
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+
+      $(window).scroll(function () {
+        $(".slideanim").each(function () {
+          var pos = $(this).offset().top;
+
+          var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+        });
+      });
+    })
+  </script>
+
+</body>
+
+</html>
